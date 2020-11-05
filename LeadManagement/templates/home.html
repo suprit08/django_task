@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h2>Home</h2>
+<table border="2">
+    <tr>
+        <th>Lead</th><th>Followup</th>
+    {% for q in qs %}
+    <tr>
+        <td>{{q.source}}<br>{{q.phone_number}}</td>
+        <td>{{q.resposne}} - {{q.date_of_followup|date:"SHORT_DATE_FORMAT"}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<!--<form action="display/">-->
+<!--    {{form}}-->
+<!--    <button type="submit"></button>-->
+<!--</form>-->
+</body>
+</html>
